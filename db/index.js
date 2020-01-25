@@ -1,11 +1,11 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
-const PORT = 3000;
+const mysql = require('mysql');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
+const {etsy_API_KEY, db_password} = require("../config.js")
+const db = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'me',
+  password : db_password,
+  database : 'my_db'
 });
+
+db.connect();
