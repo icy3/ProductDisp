@@ -1,4 +1,4 @@
-let dataArr = [
+let mockData = [
   {
       "listing_id": 651186954,
       "state": "active",
@@ -7746,4 +7746,4 @@ let dataArr = [
   }
 ];
 
-module.exports = {dataArr}
+module.exports = {mockData}
