@@ -1,10 +1,11 @@
 const mysql = require('mysql');
 
-const {etsy_API_KEY, db_password} = require("../config.js")
+const {db_password} = require("../config.js")
+console.log('db password is', db_password);
 const db = mysql.createConnection({
   host     : 'localhost',
-  user     : 'student',
-  password : 'student',
+  user     : 'root',
+  password : `${db_password}`,
   // had trouble importing password
   database : 'product_display'
 });

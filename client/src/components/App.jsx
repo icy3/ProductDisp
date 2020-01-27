@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 
  class App extends React.Component {
@@ -11,7 +10,7 @@ import ReactDOM from 'react-dom';
      render() {
         return (
             <div>
-                <h1>Hello world</h1>
+                <h1>Hello world from react</h1>
             </div>
         )
     }
