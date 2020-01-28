@@ -1,0 +1,10 @@
+.side-image{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image{
+    display: flex;
+    height: 30px;
+    width: 30px
+}
