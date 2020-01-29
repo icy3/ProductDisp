@@ -1,10 +1,24 @@
-.side-image{
-    display: flex;
-    flex-direction: column;
+.side-image {
+  display: flex;
+  flex-direction: column;
 }
 
-.main-image{
-    display: flex;
-    height: 30px;
-    width: 30px
+.main-image {
+  display: flex;
+}
+
+.outer {
+  display: flex;
+  color: rgb(0, 0, 0);
+  max-width: 794px;
+  max-height: 822px;
+}
+
+.carousel-inner {
+}
+
+.carousel-bottom img {
+  display: flex;
+  height: 60px;
+  width: 60px;
 }
