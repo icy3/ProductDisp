@@ -3,7 +3,7 @@ const mysql = require("mysql");
 const { db_password } = require("../config.js");
 console.log("db password is", db_password);
 const db = mysql.createConnection({
-  host: "localhost",
+  host: "main-image.crdjksrphgly.us-east-2.rds.amazonaws.com",
   user: "root",
   password: `${db_password}`,
   database: "product_display"

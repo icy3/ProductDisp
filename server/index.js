@@ -2,8 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const PORT = 3001;
-const db = require('../db/index.js');
+const db = require("../db/index.js");
+const cors = require("cors");
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../client/dist"));
@@ -19,7 +21,7 @@ app.get(`/listing/:listing_id`, (req, res) => {
     } else {
       res.send(result);
     }
-  })
+  });
 });
 
 app.listen(PORT, () => {
