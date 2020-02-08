@@ -19,7 +19,8 @@
 
 #main-image .big-image img {
   display: flex;
-  width: 60%;
+  height: 500px;
+  width: auto;
   margin: 0 auto;
   border-radius: 20px;
 }
