@@ -5,9 +5,10 @@ function Image(props) {
   return (
     <li>
       <img
-        className="little-image"
+        className={props.className}
+        // {...props}
         src={props.image_url}
-        onClick={() => {
+        onMouseEnter={() => {
           props.handleClick(props.image_url, props.index);
         }}
       ></img>

@@ -51,6 +51,7 @@ class App extends React.Component {
       mainImg: this.state.images[this.state.currentIndex + 1].image_url
     });
   }
+
   handlePreviousClick(index) {
     if (!this.state.images[this.state.currentIndex - 1]) return;
     this.setState({
@@ -63,8 +64,7 @@ class App extends React.Component {
     this.setState({ heart: !this.state.heart });
   }
 
-  getPreviousImage() {}
-
+  //also handles hover over
   handleClick(imageUrl, index) {
     this.setState({ mainImg: imageUrl, currentIndex: index });
   }
@@ -103,7 +103,7 @@ class App extends React.Component {
                 </svg>
               </span>
             </button>
-            <div className="change-buttons">
+            <div>
               <button
                 className="change-buttons prev-button"
                 onClick={() => {
@@ -151,10 +151,16 @@ class App extends React.Component {
           {this.state.images.map((image, index) => {
             return (
               <Image
+                className={
+                  this.state.currentIndex === index
+                    ? "little-image-hover"
+                    : "little-image"
+                }
                 key={index}
                 index={index}
                 image_url={image.image_url}
                 handleClick={this.handleClick}
+                handleHoverOver={this.handleHoverOver}
               />
             );
           })}
