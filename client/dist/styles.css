@@ -3,6 +3,7 @@
 }
 
 #main-image .main {
+  max-width: 1080px;
   width: 66.6%;
   margin: 0;
   float: left;
@@ -134,9 +135,8 @@
   fill: red;
 }
 
-#main-image .main {
-  max-width: 814px;
-  max-width: 816px;
+#main-image .container {
+  margin: 0 auto;
 }
 
 /* * {
