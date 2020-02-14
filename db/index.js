@@ -1,11 +1,11 @@
 const mysql = require("mysql");
 
-const { db_password } = require("../config.js");
-console.log("db password is", db_password);
+// const { db_password } = require("../config.js");
+// console.log("db password is", db_password);
 const db = mysql.createConnection({
-  host: "main-image.crdjksrphgly.us-east-2.rds.amazonaws.com",
-  user: "root",
-  password: `${db_password}`,
+  host: "localhost",
+  user: "student",
+  password: "student",
   database: "product_display"
 });
 

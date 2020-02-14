@@ -1,10 +1,10 @@
-const { etsy_API_KEY } = require("../config.js");
+// const { etsy_API_KEY } = require("../config.js");
 const { db } = require("./index.js");
 const { mockData } = require("./mockData.js");
 const axios = require("axios");
 
 var insertMockData = () => {
-  console.log("james is a hobo", etsy_API_KEY);
+  // console.log("james is a hobo", etsy_API_KEY);
   for (let i = 0; i < mockData.length; i++) {
     let listings = mockData[i];
     let params = [listings.listing_id, listings.title, listings.creation_tsz];
@@ -25,9 +25,9 @@ const insertImageData = () => {
 
   function addImage() {
     axios
-      .get(
-        `https://openapi.etsy.com/v2/listings/${mockData[i].listing_id}/images?api_key=${etsy_API_KEY}`
-      )
+      .get('/')
+      //`https://openapi.etsy.com/v2/listings/${mockData[i].listing_id}/images?api_key=${etsy_API_KEY}`
+      
       .then(result => {
         let images = result.data.results;
         images.forEach(image => {
