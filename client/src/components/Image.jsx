@@ -7,9 +7,9 @@ function Image(props) {
       <img
         className={props.className}
         // {...props}
-        src={props.image_url}
+        // src={props.image_url}
         onMouseEnter={() => {
-          props.handleClick(props.image_url, props.index);
+          props.handleClick(props.index);
         }}
       ></img>
     </li>

@@ -13,7 +13,7 @@ class App extends React.Component {
       heart: false,
       currentIndex: 0,
       mainImg: "",
-      listingId: 651186954
+      listingId: 2
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleNextClick = this.handleNextClick.bind(this);
@@ -28,19 +28,19 @@ class App extends React.Component {
       });
     });
   }
-
   getImages() {
+    let randy = Math.floor(Math.random()*100)
     axios
-      .get(`/listing/${this.state.listingId}`)
+      .get(`/listing/${randy}`)
       /*
       , {
         baseURL
       }*/
       .then(data => {
         this.setState(
-          { images: data.data, mainImg: data.data[0].image_url },
+          { images: data.data, mainImg: data.data[0] },
           () => {
-            console.log(this.state.images[0].image_url);
+            console.log("UNDEFINED HERE", this.state.images[0]);
           }
         );
       });
@@ -50,7 +50,7 @@ class App extends React.Component {
     if (!this.state.images[this.state.currentIndex + 1]) return;
     this.setState({
       currentIndex: index + 1,
-      mainImg: this.state.images[this.state.currentIndex + 1].image_url
+      mainImg: this.state.images[this.state.currentIndex + 1]
     });
   }
 
@@ -58,7 +58,7 @@ class App extends React.Component {
     if (!this.state.images[this.state.currentIndex - 1]) return;
     this.setState({
       currentIndex: index - 1,
-      mainImg: this.state.images[this.state.currentIndex - 1].image_url
+      mainImg: this.state.images[this.state.currentIndex - 1]
     });
   }
 
@@ -160,7 +160,7 @@ class App extends React.Component {
                 }
                 key={index}
                 index={index}
-                image_url={image.image_url}
+                // image_url={image.image_url}
                 handleClick={this.handleClick}
                 handleHoverOver={this.handleHoverOver}
               />
