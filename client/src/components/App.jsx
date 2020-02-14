@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
-import MainImage from "./MainImage.jsx";
+// import MainImage from "./MainImage.jsx";
 import Image from "./Image.jsx";
-const baseURL =
-  "http://mainimage-env.atbwqah4uj.us-east-2.elasticbeanstalk.com/";
+// const baseURL =
+//   "http://mainimage-env.atbwqah4uj.us-east-2.elasticbeanstalk.com/";
 
 class App extends React.Component {
   constructor(props) {
@@ -31,9 +31,11 @@ class App extends React.Component {
 
   getImages() {
     axios
-      .get(`/listing/${this.state.listingId}`, {
+      .get(`/listing/${this.state.listingId}`)
+      /*
+      , {
         baseURL
-      })
+      }*/
       .then(data => {
         this.setState(
           { images: data.data, mainImg: data.data[0].image_url },
