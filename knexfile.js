@@ -1,7 +1,7 @@
 module.exports = {
     development: {
         client: "postgresql",
-        connection: `postgres://localhost:5432/${product_display}`,
+        connection: 'postgres://postgres:student@localhost:5432/product_display',
         migrations: {
             directory: __dirname + "/migrations"
         },
@@ -10,3 +10,7 @@ module.exports = {
         }
     }
 }
+//require('knex')({
+    // client: 'pg',
+    // connection: 
+//   })
