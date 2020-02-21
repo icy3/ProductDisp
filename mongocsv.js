@@ -1,0 +1,1 @@
+// mongoimport --type csv -d mongo -c users --headerline /Users/student/Desktop/mongo.csv
