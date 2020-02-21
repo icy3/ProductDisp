@@ -11,3 +11,5 @@ const pool = new Pool({
 })
 const getImage = (request, response) => {
 }
+
+module.exports = {getImage}
